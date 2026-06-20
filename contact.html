@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Phumnawat Phosawatmanee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
+</head>
+<body>
+
+    <!--  Navbar  -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Phumnawat Phosawatmanee</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  Page Hero  -->
+    <div class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>I'm open to internship opportunities, collaboration, or just a friendly conversation about design and technology.</p>
+        </div>
+    </div>
+
+    <!--  Contact links  -->
+    <section class="contact-section">
+        <div class="container">
+
+            <div style="text-align:center; margin-bottom: 40px;" class="reveal">
+                <div class="availability">
+                    <span class="availability-dot"></span>
+                    Available for opportunities in 2026
+                </div>
+            </div>
+
+            <div class="contact-grid reveal reveal-delay-1">
+
+                <!-- Email -->
+                <a href="mailto:poom_phubadin@hotmail.com" class="contact-link-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <div class="contact-card-label">Email</div>
+                        <div class="contact-card-value">poom_phubadin@hotmail.com</div>
+                    </div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/Midas0901" target="_blank" class="contact-link-card teal">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div>
+                        <div class="contact-card-label">GitHub</div>
+                        <div class="contact-card-value">github.com/Midas0901</div>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/phumnawat-phosawatmanee-a0a76626a" target="_blank" class="contact-link-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div>
+                        <div class="contact-card-label">LinkedIn</div>
+                        <div class="contact-card-value">Phumnawat Phosawatmanee</div>
+                    </div>
+                </a>
+
+                <!-- Location -->
+                <div class="contact-link-card teal" style="cursor:default;">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <div class="contact-card-label">Based In</div>
+                        <div class="contact-card-value">Burnaby, BC In Canada</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA = Call To Action-->
+            <div class="contact-cta reveal reveal-delay-2">
+                <p>Prefer a direct email? Send me a message and I'll get back to you.</p>
+                <a href="mailto:poom_phubadin@hotmail.com" class="btn">
+                    <i class="fas fa-paper-plane" style="margin-right:8px;"></i>Send an Email
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--  Footer  -->
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Phumnawat Phosawatmanee. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="https://midas0901.github.io/STYLEGUIDE/">Style Guide</a>
+                <a href="https://midas0901.github.io/STYLEGUIDE/citations.html">Citations</a>
+                <a href="https://github.com/Midas0901/Phumnawat-s-portfolio" target="_blank">GitHub Repository</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://github.com/Midas0901" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/phumnawat-phosawatmanee-a0a76626a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:poom_phubadin@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Phumnawat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/projects.css">
+</head>
+<body>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!--  Navbar  -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Phumnawat Phosawatmanee</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  Page Hero  -->
+    <div class="projects-hero">
+        <div class="container">
+            <h1>Featured Projects</h1>
+            <p>Scroll through a step-by-step breakdown of each project — from first idea to final result.</p>
+            <nav class="project-nav">
+                <a href="#fish">Animated Fish</a>
+                <a href="#pavilion">Pavilion Design</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+
+            <!-- PROJECT 1 — ANIMATED FISH -->
+            <div class="project-block" id="fish">
+
+                <div class="project-banner reveal">
+                    <div class="project-number">01</div>
+                    <div class="project-banner-text">
+                        <span class="project-tag">3D Animation · Maya · 2025</span>
+                        <h2>Animated Fish</h2>
+                        <p>A fully rigged, looping underwater animation — exploring how to make a digital creature feel truly alive through anatomy, timing, and atmosphere.</p>
+                    </div>
+                </div>
+                <!-- Embed youtuber video in website - https://www.youtube.com/watch?v=ly36kn0ug4k -->
+                <div class="project-video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/hbXpKPsMhlQ" 
+                                title="Animated Fish Video" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                <!-- PANEL 1 — How I Started — image left, text right -->
+                <div class="panel" data-step="1">
+                    <div class="panel-img">
+                        <img src="IMG/StoryBoard.png" alt="Fish anatomy reference and concept sketches">
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 01 — How I Started</span>
+                              <h3>Research &amp; Concept</h3>
+                                 <p>In my SFU IAT 343 Animation course, our group chose to create a short animated film titled <strong>“Adventure of a Fish in the Big Ocean”</strong>. We began by collaboratively designing the main characters — a curious tropical fish as the protagonist, along with supporting sea creatures such as an octopus and a sea turtle. After finalizing the character designs, we developed a detailed storyboard to organize each scene, define camera angles, timing, and narrative flow.</p>
+                                   <ul>
+                                    <li>Studied real fish anatomy and underwater reference footage for realistic locomotion</li>
+                                    <li>Analyzed S-curve spine motion and caudal fin lead in swimming cycles</li>
+                                    <li>Created frame-by-frame storyboard to establish story sequence and pacing</li>
+                                  </ul>
+                    </div>
+                </div>
+
+                <!-- PANEL 2 — Modeling & Rigging — image right, text left -->
+                <div class="panel flip" data-step="2">
+                    <div class="panel-img">
+                        <img src="IMG/FishModel.jpg" alt="Maya rig with joint chain visible">
+                    </div>
+                    <div class="panel-text">
+                         <span class="panel-step-label">Step 02 — Process</span>
+                         <h3>Modeling &amp; Rigging</h3>
+                         <p>For our group project, I was responsible for modeling and rigging the main fish character. Starting from scratch, I learned modeling techniques through YouTube tutorials and built a clean low-poly fish body in Maya. I then created a joint chain along the spine and into the fins to enable realistic swimming motion. I also studied fish swimming references on YouTube to accurately animate the tail and body wave, making the movement feel natural and lifelike in the ocean environment.</p>
+                           <ul>
+                           <li>Self-taught low-poly modeling techniques via YouTube tutorials</li>
+                           <li>Focused on realistic tail undulation and S-curve body movement based on ocean reference footage</li>
+                           <li>Careful skin weighting and weight painting for smooth, organic deformation</li>
+                           </ul>
+                    </div>
+                </div>
+
+                <!-- PANEL 3 — Problems — image left, text right -->
+                <div class="panel amber" data-step="3">
+                    <div class="panel-img">
+                        <div class="panel-img">
+                            <!-- Put video in website - https://www.youtube.com/watch?v=BAx2GaMW2qA-->
+                            <video src="/VIDEO/Scene Editing.mp4" autoplay loop muted playsinline class="panel-video"></video>
+                        </div>
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 03 — Problems</span>
+                        <h3>Model Overlapping & Complex Octopus</h3>
+                        <p>"I had a problem with too many models overlapping each other when I copy and paste them into my Maya file or scene. This makes Maya run slower, and sometimes it crashes while I am working, causing me to lose my files. A second problem is that some models, like the octopus, are very complex and not rigged, making them difficult for us to rig."</p>
+                        <ul>
+                        <li>Model overlapping and scene lag when copying assets in Maya</li>
+                        <li>Complex octopus geometry proved extremely difficult to rig</li>
+                        </ul>
+                    </div>
+                </div>
+
+                               <!-- PANEL 4 — Solution — image right, text left -->
+                <div class="panel flip" data-step="4">
+                    <div class="panel-img">
+                        <img src="/IMG/Solution.png" alt="Fixing Animation">
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 04 — Solution &amp; Result</span>
+                        <h3>Save File & Manually</h3>
+                        <p>Through persistent iteration, I resolved both the animation and technical issues. To fix the scene performance problems, I started saving the file more frequently and avoided copying large numbers of models at once. For the complex octopus, I separated each tentacle, rigged them individually by hand, and successfully integrated them into the scene. These adjustments, combined with refined animation curves, secondary motion, and underwater effects, resulted in a smooth 8-second seamless animation loop.</p>
+                        <ul>
+                        <li>Frequent saving and careful asset management eliminated overlapping and crashes</li>
+                        <li>Manually separated and rigged each octopus tentacle individually</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /project-block -->
+
+            <div class="project-divider"></div>
+
+            <!-- PROJECT 2 — PAVILION DESIGN -->
+            <div class="project-block" id="pavilion">
+
+                <div class="project-banner reveal">
+                    <div class="project-number">02</div>
+                    <div class="project-banner-text">
+                        <span class="project-tag teal">Spatial Design · Rhino 8 · 2025</span>
+                        <h2>Pavilion Design</h2>
+                        <p>A public pavilion designed to balance shelter, natural light, airflow, and privacy.</p>
+                    </div>
+                </div>
+
+                <!-- PANEL 1 — How I Started — image left, text right -->
+                <div class="panel" data-step="1">
+                    <div class="panel-img">
+                        <img src="/IMG/Pavilion.png" alt="Site analysis diagrams and sun angle study">
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 01 — How I Started</span>
+                        <h3>Brainstorming Ideas  &amp; Analysis </h3>
+                        <!-- &amp; = & make brower can read -->
+                        <p>For my individual project in SFU IAT 233, I was tasked with designing a public pavilion for a park. My initial concept featured a two-level structure to provide elevated viewing platforms, allowing visitors to enjoy high vantage points and take photos. I began with thorough site analysis, studying sun angles throughout the day, prevailing wind directions, and pedestrian circulation patterns to ensure the pavilion would be both functional and inviting.</p>
+                        <ul>
+                        <li>Conducted sun-angle analysis for morning, noon, and afternoon</li>
+                        <li>Performed wind rose studies for natural ventilation</li>
+                        <li>Designed two-level structure for elevated viewing and photography opportunities</li>
+                        <li>Gathered user needs focusing on shelter, openness, and visual experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PANEL 2 — Parametric Modeling — image right, text left -->
+                <div class="panel flip" data-step="2">
+                    <div class="panel-img">
+                        <img src="/IMG/Drawing.png" alt="Rhino 8 parametric model with louver variations">
+                    </div>
+                    <div class="panel-text">
+                       <span class="panel-step-label">Step 02 — Process</span>
+                       <h3>Parametric Modeling in Rhino 8</h3>
+                       <p>In the design development phase, I worked extensively in Rhino 8. I started by drawing precise top-view layouts to determine optimal placement of structural elements, seating areas, windows, and stairs. Using parametric modeling, I was able to quickly test different configurations of roof curvature and louver angles without rebuilding the model from scratch. This approach allowed me to efficiently explore how the structure, circulation, and user experience worked together.</p>
+                       <ul>
+                       <li>Created detailed top-view plans to position structure, seats, windows, and stairs</li>
+                       <li>Built a fully parametric model for rapid iteration of roof curvature and louver angles (15°–60° tested)</li>
+                       <li>Linked design parameters to structural considerations and spatial flow</li>
+                       <li>Explored multiple material options including wood, steel, and glass</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <!-- PANEL 3 — Problems — image left, text right -->
+                <div class="panel amber" data-step="3">
+                    <div class="panel-img">
+                        <img src="/IMG/Design.png" alt="Early closed model vs open model comparison">
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 03 — Problems</span>
+                        <h3>Shelter vs. Openness Tension</h3>
+                        <p>The project hit major friction when balancing the core design brief with my technical limitations in Rhino 8. Striking a balance between full shelter and open views proved incredibly difficult, a challenge made harder by my steep learning curve with parametric software. Translating complex architectural logic into stable, digital geometry resulted in frequent modeling errors and structural oversights before I shifted to physical testing.</p>
+                        <ul>
+                            <li>Faced difficulties calculating realistic load-bearing support points for the heavy, elevated two-level platform.</li>
+                            <li>Struggled to utilize advanced parametric tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PANEL 4 — Solution — image right, text left -->
+                <div class="panel flip" data-step="4">
+                    <div class="panel-img">
+                        <img src="/IMG/Output.png" alt="Physical scale model with light testing">
+                    </div>
+                    <div class="panel-text">
+                        <span class="panel-step-label">Step 04 — Solution &amp; Result</span>
+                        <h3>Physical Prototype &amp; Final Design</h3>
+                        <p>To resolve my Rhino 8 limitations, I utilized online YouTube architectural tutorials to master parametric modeling commands, which allowed me to properly construct the louver angles and fix my broken geometry. Secondly,  To fix the structural load-bearing issues of the elevated two-level platform, I implemented a continuous load path by establishing a unified vertical column grid and horizontal beam framing system.</p>
+                        <ul>
+                            <li>Leveraged YouTube software guides to overcome Rhino 8 roadblocks</li>
+                            <li>Established a clean column grid and primary beam framework underneath the platform to create a realistic, continuous load path.</li>
+                            <li> Validated digitally and confirmed optimal by the physical lighting test to balance shelter and openness.</li>
+   
+</ul>
+                    </div>
+                </div>
+
+            </div><!-- /project-block -->
+
+        </div><!-- /container -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Phumnawat Phosawatmanee. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="https://midas0901.github.io/STYLEGUIDE/">Style Guide</a>
+                <a href="https://midas0901.github.io/STYLEGUIDE/citations.html">Citations</a>
+                <a href="https://github.com/Midas0901/Phumnawat-s-portfolio" target="_blank">GitHub Repository</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://github.com/Midas0901" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/phumnawat-phosawatmanee-a0a76626a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:poom_phubadin@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+<!-- Source - https://www.youtube.com/watch?v=dZ9aiB8g9lY - color bar line on top of page-->
+ <!-- Source - https://www.youtube.com/watch?v=Jo8ABAJtMM0 - IntersectionObserver - container project show up in order -->
+    <script>
+        // Scroll progress bar - JAVASCRIPT CODE 
+        const bar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const max = document.body.scrollHeight - window.innerHeight;
+            bar.style.width = (window.scrollY / max * 100) + '%';
+        }, { passive: true });
+
+        //  Intersection Observer (panels + banners) 
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target); // fire once
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.panel, .reveal').forEach(el => io.observe(el));
+
+        //  Active project nav pill on scroll 
+        const sections = document.querySelectorAll('.project-block');
+        const pills    = document.querySelectorAll('.project-nav a');
+
+        const navIO = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const id = e.target.id;
+                    pills.forEach(p => {
+                        p.classList.toggle('active', p.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(s => navIO.observe(s));
+    </script>
+</body>
+</html>

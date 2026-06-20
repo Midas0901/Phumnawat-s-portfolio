@@ -1,0 +1,403 @@
+/*  Page hero  */
+.projects-hero {
+    padding: 160px 0 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 60% at 30% 50%, rgba(45, 212, 190, 0.228) 0%, transparent 65%),/*2 points color at background*/
+        radial-gradient(ellipse 50% 50% at 75% 30%, rgba(240, 164, 0, 0.285) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.projects-hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    color: var(--white);
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.projects-hero p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 540px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+/* Project nav pills */
+.project-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 30px; /*adds breathing room below container */
+}
+
+.project-nav a {
+    padding: 9px 24px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    text-decoration: none; /* Keeps links clean */
+    
+    /* Makes buttons visible by default on dark backgrounds */
+    background: rgba(92, 90, 90, 0.53);  
+    border: 1px solid rgb(255, 255, 255); 
+    color: rgba(255, 255, 255, 0.8);         
+}
+
+/* Active and Hover States remain bright and pop out */
+.project-nav a:hover,
+.project-nav a.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0e1117;
+    box-shadow: 0 0 15px rgba(240, 165, 0, 0.3); 
+}
+
+/*  Sticky progress bar */
+.progress-bar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    z-index: 999;
+    transition: width 0.1s linear;
+}
+
+/*  Project block wrapper */
+.project-block {
+    padding: 80px 0 0;
+}
+
+/* Project title banner */
+.project-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-number {
+    font-family: var(--font-head);
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.256);
+    letter-spacing: -4px;
+    flex-shrink: 0;
+}
+
+.project-banner-text {}
+
+.project-tag {
+    display: inline-block;
+    background: rgba(240,165,0,0.12);
+    color: var(--accent);
+    border: 1px solid rgba(240,165,0,0.25);
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.project-tag.teal {
+    background: rgba(45,212,191,0.10);
+    color: var(--accent2);
+    border-color: rgba(45,212,191,0.25);
+}
+
+.project-banner h2 {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.project-banner p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    margin-top: 10px;
+    max-width: 560px;
+}
+
+/*  Alternating panels  */
+.panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 520px;
+    margin-bottom: 4px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--card);
+}
+
+/* Even panels flip order */
+.panel.flip .panel-img  { order: 2; }
+.panel.flip .panel-text { order: 1; }
+
+/* Image side */
+.panel-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.panel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.panel:hover .panel-img img { transform: scale(1.04); }
+
+/* Image overlay tint */
+.panel-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(14,17,23,0.35) 0%, transparent 60%); /*CSS Gradient -https://cssgradient.io/ make image look better*/
+    pointer-events: none;
+}
+
+/* Text side */
+.panel-text {
+    padding: 52px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.panel-step-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent2);
+}
+
+.panel.amber .panel-step-label { color: var(--accent); }
+
+.panel-text h3 {
+    font-family: var(--font-head);
+    font-size: 1.65rem;
+    color: var(--white);
+    line-height: 1.15;
+}
+
+.panel-text p {
+    color: var(--muted);
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+.panel-text ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.panel-text ul li {
+    color: var(--muted);
+    font-size: 0.92rem;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.panel-text ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent2);
+}
+
+.panel.amber .panel-text ul li::before { color: var(--accent); }
+
+/*  Scroll-reveal animations  */
+
+.panel {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    
+    /* FIX: Pushes the next panel down by exactly 50px */
+    margin-bottom: 50px; 
+}
+
+.panel.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image slides from its side - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
+.panel:not(.flip) .panel-img {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+}
+
+.panel.flip .panel-img {
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+}
+
+.panel.visible .panel-img {
+    clip-path: inset(0 0% 0 0%);
+}
+
+/* Text fades up */
+.panel-text {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease 0.35s, transform 0.65s ease 0.35s;
+}
+
+.panel.visible .panel-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay per panel */
+.panel:nth-child(2) { transition-delay: 0.05s; }
+.panel:nth-child(3) { transition-delay: 0.10s; }
+.panel:nth-child(4) { transition-delay: 0.15s; }
+
+/*  Between-projects divider  */
+.project-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    margin: 90px 0 70px;
+}
+
+/*  Reveal utility (banner etc.)  */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.22s; }
+
+/*  Responsive  */
+@media (max-width: 860px) {
+    .panel {
+        grid-template-columns: 1fr;
+    }
+
+    .panel.flip .panel-img  { order: 0; }
+    .panel.flip .panel-text { order: 1; }
+
+    .panel-img { min-height: 260px; }
+
+    .panel-text { padding: 36px 28px; }
+
+    /* Disable clip-path reveal on mobile (simpler fade) */
+    .panel:not(.flip) .panel-img,
+    .panel.flip .panel-img {
+        clip-path: inset(0 0 0 0);
+        transition: opacity 0.7s ease 0.15s;
+        opacity: 0;
+    }
+
+    .panel.visible .panel-img {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    .project-number { font-size: 3.5rem; }
+}
+
+@media (max-width: 540px) {
+    .panel-text { padding: 28px 20px; }
+    .project-banner { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+/* PANEL IMAGE & VIDEO – CENTERED */
+.panel-img {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    min-height: 320px;           
+    display: flex;
+    align-items: center;         
+    justify-content: center;     
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;     
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.panel-img img,
+.panel-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Full image visible, no cropping */
+    display: block;
+    background: transparent;
+}
+
+/* Video styling */
+.panel-video {
+    background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .panel-img {
+        max-width: 100%;
+        min-height: 260px;
+    }
+}
+
+/* Responsive YouTube Embed Styles with White Aura - https://www.youtube.com/watch?v=ezP4kbOvs_E */
+.project-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin-top: 25px;       
+    margin-bottom: 50px;    
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    
+    /* white aura/glow around the video player */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.18), 
+                0 10px 30px rgba(255, 255, 255, 0.5);
+
+    transition: box-shadow 0.3s ease;
+}
+
+.project-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
